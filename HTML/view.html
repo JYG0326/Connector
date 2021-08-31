@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="file:///C:/Users/user/Desktop/Project%20Fold/CSS/view.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <title>View all content</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <a href="/main" style="text-decoration:none"><h1>CONNECTOR</h1></a>
+        </header>
+        <section id = "contents">
+            <div class="main_page">
+                <p class="view_name"><%= data.name %></p>
+                <p class="view_lang"><%= data.language %></p>
+                <p class="view_class"><%= data.class %></p>
+                <p class="view_writer"><%= data.writer %></p>
+                <p class="view_content"><%= data.content %></p>
+                
+                <p class="view_id"><%= data.id %></p>
+            </div>
+        </section>
+        <footer id = "footer">
+            푸터
+        </footer>
+    </div>
+</body>
+</html>

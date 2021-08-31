@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="file:///C:/Users/user/Desktop/projec_test/Project_Fold/CSS/main.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="icon" href="data:,">
+    <title>CONNECTOR</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <h1 class="main_title"><a href="/main" style="text-decoration:none">CONNECTOR</a></h1>
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="">최근지표</a></li>
+                    <li><a href="">글쓰기</a></li>
+                    <li><a href="">정보수정</a></li>
+                    <li><a href="">로그인</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        <aside id="l_side">
+            <div class="l_side_form">
+                <div class="div">
+                    <p class="left_font"><strong>언어</strong></p>
+                    <div class="line"></div>
+                    <form action="" class="filter_3" method="POST">
+                        <input type="submit" class="button" value="C">
+                    </form>
+                    <form action="" class="filter_3" method="POST">
+                        <input type="submit" class="button" value="C++">
+                    </form>
+                    <form action="" class="filter_3" method="POST">
+                        <input type="submit" class="button" value="C#">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Python">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Java">
+                    </form>
+                    <form action="" class="filter_1" method="POST">
+                        <input type="submit" class="button" value="JavaScript">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Node.js">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Kotlin">
+                    </form>
+                    <form action="" class="filter_1" method="POST">
+                        <input type="submit" class="button" value="Swift">
+                    </form>
+                    <p class="left_font"><strong>분야</strong></p>
+                    <div class="line"></div>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Front_end">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Back_end">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Android">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="iOS">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="A.I">
+                    </form>
+                    <form action="" class="filter_2" method="POST">
+                        <input type="submit" class="button" value="Game">
+                    </form>
+                </div>
+        </aside>
+        <section id = "contents">
+            <div class="main_page">
+                <div class="scroll">
+                <table width="100%">
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>content</th>
+                        <th>language</th>
+                        <th>class</th>
+                        <th>writer</th>
+                    </tr>
+                    <% main.forEach(function(item,index){ %>
+                    <tr>
+                        <td><a href='http://10.120.74.53:8085/<%= item.id%>'style="text-decoration:none"><strong><%= item.id%></strong></a></td>
+                        <td><a href="/viewallcontents/<%= item.id %>"style="text-decoration:none"><strong><%= item.name%></strong></a></td>
+                        <td><%= item.content.substring(0,25)%></td>
+                        <td><%= item.language%></td>
+                        <td><%= item.class%></td>
+                        <td><%= item.writer%></td>
+                    </tr>
+                    <% }); %>
+                </table>
+            </div>
+            </div>
+        </section>
+        <aside id = "r_side">
+            <div class="personal_inf">
+                <div>
+                    <a href="./editinfor/<%= data.id %>" style="text-decoration:none"><p class="right_font"><strong>내 정보</strong></p></a>
+                    <div class="line"></div>
+                        <h4>아이디: <%= data.id %></h4>
+                        <br>
+                        <h4>이름: <%= data.name %></h4>
+                        <br>
+                        <h4>자주쓰는 언어: <%= data.language!=null? data.language:'아직 선택X' %></h4>
+                        <br>
+                        <h4>전공: <%= data.class!=null? data.class:'아직 선택X' %></h4>
+                        <br>
+                        <h4>기수: <%= data.jockey %></h4>
+                        <br>
+                        <a href="./posting" style="text-decoration:none">글쓰기</a>
+                        <a href="/logout" style="text-decoration:none">로그아웃</a>
+                </div>
+        </aside>
+        <footer id = "footer">
+            푸터
+        </footer>
+    </div>
+</body>
+</html>

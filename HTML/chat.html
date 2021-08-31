@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="data:,">
+        <title>CONNECTOR - Simple Chat</title>
+        <link rel="stylesheet" href="./chat.css">
+        <script src="./socket.io/socket.io.js"></script>
+        <script src="./chat.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <header id="header">
+                <a href="/main" style="text-decoration:none"></a><h1>CONNECTOR</h1></a>
+            </header>
+            <section id = "contents">
+                <div class="main_page">
+                    <div class="main_title">
+                        <a href="http://10.120.74.53:8000" style="text-decoration:none"><p>Simple Chat</p></a>
+                    </div>
+                    <div id="chatbox"class="main_chatbox">
+                        <div class="enter"><p>님이 입장하셨습니다</p></div>
+                        <div class="enter"><p>님이 입장하셨습니다</p></div>
+                        <div class="chat">
+                            <h3>Null</h3>
+                            <p>12:32</p>
+                            <span>ㅁㅇㅁ</span>
+                        </div>
+                        <div class="chat">
+                            <h3>Null</h3>
+                            <p>12:32</p>
+                            <span>ods</span>
+                        </div>
+                    </div>
+                    <div class="main_input">
+                        <input id="content" class="content"type="text" placeholder="content"  maxlength="23"autocomplete="off" onkeyup="if(window.event.keyCode==13){if(document.getElementById('content').value.length==0){}else{sendMessage()}}" />
+                        <input type="button" class="send" onclick="if(document.getElementById('content').value.length==0){}else{sendMessage()}" onsubmit="return isValidSubmit()" value="보내기"/>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                푸터
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="file:///C:/Users/user/Desktop/Project%20Fold/CSS/write.css">
+    <title>CONNECTOR - 글쓰기</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <a href="/main" style="text-decoration:none"><h1>CONNECTOR</h1></a>    
+        </header>
+        <section id = "contents">
+            <div class="main_page">
+                <form action="/posting" class="write_form" method="POST">
+                    <input type="text" class="text_title" maxlength="25" name="title" placeholder="제목입력" autocomplete="off" required>
+                    <select name="option_lang" class="option_l" required>
+                        <!-- <option value="">언어선택</option> -->
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="C#">C#</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Kotlin">Kotlin</option>
+                        <option value="Swift">Swift</option>
+                    </select>
+                    <select name="option_field" class="option_f" required>
+                        <!-- <option value="">분야선택</option> -->
+                        <option value="Front_end">Front_end</option>
+                        <option value="Back_end">Back_end</option>
+                        <option value="Android">Android</option>
+                        <option value="iOS">iOS</option>
+                        <option value="A.I">A.I</option>
+                        <option value="Game">Game</option>
+                    </select>
+                    <textarea name="content"style="resize:none" class="text_contents" cols="150" rows="20" placeholder="내용입력"required></textarea>
+                    <input type="submit" class="write_submit"value="등록하기">
+                </form>
+            </div>
+        </section>
+        <aside id = "r_side">
+            <div class="personal_inf">
+                    <a href="./editinfor/<%= data.id %>"style="text-decoration:none"><p class="inf_font"><strong>내 정보</strong></p></a>
+                    <div class="line"></div>
+                    <br>
+                    <h4>아이디: <%= data.id %></h4>
+                        <br>
+                        <h4>이름: <%= data.name %></h4>
+                        <br>
+                        <h4>자주쓰는 언어: <%= data.language!=null? data.language:'아직 선택X' %></h4>
+                        <br>
+                        <h4>전공: <%= data.class!=null? data.class:'아직 선택X' %></h4>
+                        <br>
+                        <h4>기수: <%= data.jockey %></h4>
+                        <br>
+                        <a href="./posting"style="text-decoration:none">글쓰기</a>
+                        <a href="/logout"style="text-decoration:none">로그아웃</a>
+                </div>
+        </aside>
+        <footer id = "footer">
+            푸터
+        </footer>
+    </div>
+</body>
+</html>

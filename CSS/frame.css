@@ -1,0 +1,49 @@
+/*----------전역----------*/
+*{
+    margin:0;
+}
+a:visited{
+    color: black;
+}
+a:link{
+    color:black;
+}
+.line{
+    border: 0.1px solid black; width: 90%; height: 0px; margin:auto;
+}
+
+/*----------헤더----------*/
+#header{
+    width:100%;
+    height:50px;
+    background-color:honeydew;
+}
+
+
+/*----------메인페이지-----------*/
+#contents{
+    position: relative;
+    width:85%;
+    height:650px;
+    float:left;
+}
+.main_page{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:90%;
+    height:550px;
+    border:2px solid;
+    border-radius:5px;
+    margin:auto;
+}
+
+/*----------푸터-----------*/
+#footer{
+    width:100%;
+    height:50px;
+    background-color:honeydew;
+    clear:left;
+}
